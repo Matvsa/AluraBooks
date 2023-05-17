@@ -1,0 +1,139 @@
+@import url(../style.css);
+
+
+.cabecalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url(../imgs/Menu.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding: 1em;
+    position: relative;
+}
+
+.cabecalho {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 4em;
+    width: 60vw;
+}
+
+.container__botao:checked ~ .lista-menu{
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: white;
+
+}
+
+.lista-menu__titulo {
+    color: #EB9B00;
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    color: #002F52;
+    background-clip: text;
+    text-decoration: none;
+}
+
+.container__botao {
+    display: none;
+}
+
+.container__titulo {
+    display: none;
+}
+.opcao{
+    display: none;
+}
+
+.container__texto {
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .container__titulo, .container__titulo-negrito {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px
+    }
+
+    .container__titulo{
+        font-weight: 400;
+        display: block;
+    }
+    .container__titulo-negrito{
+        font-weight: 700;
+    }
+    
+    .opcao{
+        display: flex;
+    }
+
+    .opcao__item{
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opcao__link{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .container__imagem-transparente{
+        display: none;
+    }
+
+    .cabecalho__menu-hamburguer {
+        display: none;
+    }
+
+    .opcao__botao:checked~ .lista-menu{
+        display: block;
+        width: auto;
+    }
+
+    .opcao__botao{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .container__link {
+        display:  flex;
+        align-items: center;
+        text-decoration: none;
+
+    }
+    .container__texto {
+        display: block;
+    }
+    .cabecalho {
+        padding: 0 2em;
+    }
+
+    .opcao {
+        margin-right: auto;
+    }
+    
+}
